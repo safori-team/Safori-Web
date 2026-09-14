@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { team } from "@/lib/content";
@@ -14,24 +15,20 @@ export function Team() {
           />
         </Reveal>
 
-        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {team.members.map((member, i) => (
-            <Reveal key={member.name} delay={i * 70}>
-              <li className="flex h-full items-center gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-5">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-soft text-base font-bold text-brand-deep"
-                >
-                  {member.name.slice(0, 1)}
-                </span>
-                <div>
-                  <p className="text-lg font-bold text-brand-navy">{member.name}</p>
-                  <p className="mt-0.5 text-sm text-ink-muted">{member.role}</p>
-                </div>
-              </li>
-            </Reveal>
-          ))}
-        </ul>
+        <Reveal delay={100}>
+          <div className="mx-auto mt-12 flex max-w-3xl flex-col items-center gap-8 rounded-3xl border border-slate-200 bg-white px-7 py-12 text-center sm:px-12">
+            <Image
+              src="/assets/dorani.png"
+              alt="Safori의 마스코트 도란이"
+              width={810}
+              height={1002}
+              className="w-24 sm:w-28"
+            />
+            <p className="text-base leading-relaxed text-ink-muted sm:text-lg">
+              {team.body}
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

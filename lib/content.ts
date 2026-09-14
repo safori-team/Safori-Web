@@ -107,11 +107,6 @@ export const team = {
   eyebrow: "팀 소개",
   title: "팀 Caring",
   lead: "저희는 앱을 만든 것이 아니라, 현장에서 배워 앱을 바꾸고 있습니다.",
-  members: [
-    { name: "박진하", role: "PM · PO" },
-    { name: "이승연", role: "UI · UX 디자이너" },
-    { name: "박준혁", role: "프론트엔드 개발자" },
-    { name: "공윤서", role: "백엔드 개발자" },
-    { name: "이정한", role: "AI 개발자" },
-  ],
+  body:
+    "기획과 디자인, 프론트엔드와 백엔드, AI까지 한 팀이 모여 Safori를 만들고 있습니다. 복지 현장의 자문을 받아 설계를 고쳐 왔고, 앞으로도 현장에서 배운 것을 제품에 반영해 나갑니다.",
 };

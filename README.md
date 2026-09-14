@@ -26,7 +26,7 @@ npm run build    # 프로덕션 빌드
 | 서비스 | `components/service.tsx` | 말하기 → 대화하기 → 돌아보기 |
 | 핵심 기능 | `components/features.tsx` | 앱 화면 3종 |
 | 앱 시연 | `components/demo.tsx` | 실제 동작 영상 |
-| 팀 소개 | `components/team.tsx` | 팀 Caring 구성원 |
+| 팀 소개 | `components/team.tsx` | 팀 Caring 소개 (개인 실명·역할 미노출) |
 
 ### 문구 수정
 
@@ -40,6 +40,7 @@ npm run build    # 프로덕션 빌드
 - 통계·성능·테스트 지표 (자살률, E2E/단위 테스트 건수, 응답 속도, STT 정확도 등)
 - 시장 규모(TAM·SAM·SOM), 세션당 원가·매출, 기관 구독가
 - 실증 계획, KPI, 멘토링 내역, 상세 기술 스택
+- 팀원 개인 실명과 역할
 
 ## 에셋
 
