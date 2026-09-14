@@ -77,14 +77,25 @@ Pages로 배포합니다.
 없어(`Resource not accessible by integration`) 자동 활성화가 되지 않습니다.
 설정 후 Actions 탭에서 워크플로를 재실행하면 배포됩니다.
 
-주소: `https://safori-team.github.io/Safori-Web/`
+주소: `https://www.safori.cloud`
 
-하위 경로 배포라 빌드에 두 환경변수를 씁니다.
+커스텀 도메인은 루트로 서빙되므로 basePath를 쓰지 않습니다.
+`public/CNAME`이 빌드 결과에 포함되어 Pages가 도메인을 인식합니다.
 
 | 변수 | 값 | 역할 |
 | --- | --- | --- |
 | `STATIC_EXPORT` | `true` | `output: "export"` 정적 내보내기 |
-| `NEXT_PUBLIC_BASE_PATH` | `/Safori-Web` | basePath 및 정적 파일 경로 접두사 |
+| `NEXT_PUBLIC_BASE_PATH` | (없음) | 하위 경로 배포로 되돌릴 때만 `/Safori-Web` 지정 |
+
+### DNS (Cloudflare)
+
+| 호스트 | 타입 | 값 | 프록시 |
+| --- | --- | --- | --- |
+| `www` | CNAME | `safori-team.github.io` | DNS only |
+| `@` | A | `185.199.108.153` ~ `185.199.111.153` (4건) | DNS only |
+
+인증서 발급이 끝나기 전에 Cloudflare 프록시(주황 구름)를 켜면 발급이 실패합니다.
+프록시를 쓰려면 발급 완료 후 SSL/TLS 모드를 **Full (strict)** 로 두고 켜세요.
 
 > `next/image`는 `unoptimized` 모드에서 basePath를 자동으로 붙이지 않습니다.
 > `public/` 아래 파일을 참조할 때는 반드시 `lib/content.ts`의 `asset()`을 거치세요.

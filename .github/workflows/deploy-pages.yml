@@ -31,7 +31,8 @@ jobs:
         run: npm run build
         env:
           STATIC_EXPORT: "true"
-          NEXT_PUBLIC_BASE_PATH: /Safori-Web
+          # 커스텀 도메인(www.safori.cloud)은 루트로 서빙되므로 basePath 없음.
+          # github.io 하위 경로로 되돌릴 일이 생기면 NEXT_PUBLIC_BASE_PATH: /Safori-Web 을 다시 넣으세요.
 
       # 최초 1회: 저장소 Settings → Pages → Source 를 "GitHub Actions" 로 지정해야 합니다.
       # (워크플로 토큰으로는 Pages 사이트를 생성할 권한이 없습니다.)
