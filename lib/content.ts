@@ -16,7 +16,7 @@ export const asset = (path: string) => `${basePath}${path}`;
 
 export const site = {
   name: "Safori",
-  eyebrow: "2026 글로벌 피우다프로젝트 · 팀 Caring",
+  eyebrow: "팀 Caring",
   tagline: "말하기만 해도 시작되는 시니어 정서 케어",
   description:
     "어르신의 이야기를 듣고, 도란이가 먼저 마음의 변화를 알아챕니다.",
