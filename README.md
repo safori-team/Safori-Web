@@ -59,8 +59,28 @@ npm run build    # 프로덕션 빌드
 
 ## 배포
 
-Vercel에 배포합니다. 프레임워크는 자동으로 Next.js로 감지되며 별도 설정이 필요 없습니다.
+### Vercel (기본)
+
+프레임워크는 자동으로 Next.js로 감지되며 별도 설정이 필요 없습니다.
 
 ```bash
 npx vercel --prod
 ```
+
+### GitHub Pages
+
+`.github/workflows/deploy-pages.yml`이 이 브랜치에 푸시될 때마다 정적 빌드 후
+Pages로 배포합니다. 저장소 Settings → Pages → Source를 **GitHub Actions**로 두면 되며,
+워크플로가 자동 활성화를 시도하므로 대개 별도 설정 없이 동작합니다.
+
+주소: `https://safori-team.github.io/Safori-Web/`
+
+하위 경로 배포라 빌드에 두 환경변수를 씁니다.
+
+| 변수 | 값 | 역할 |
+| --- | --- | --- |
+| `STATIC_EXPORT` | `true` | `output: "export"` 정적 내보내기 |
+| `NEXT_PUBLIC_BASE_PATH` | `/Safori-Web` | basePath 및 정적 파일 경로 접두사 |
+
+> `next/image`는 `unoptimized` 모드에서 basePath를 자동으로 붙이지 않습니다.
+> `public/` 아래 파일을 참조할 때는 반드시 `lib/content.ts`의 `asset()`을 거치세요.

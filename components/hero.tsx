@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site } from "@/lib/content";
+import { asset, site } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -24,7 +24,7 @@ export function Hero() {
           </p>
 
           <Image
-            src="/assets/safori-logo.png"
+            src={asset("/assets/safori-logo.png")}
             alt={site.name}
             width={1512}
             height={408}
@@ -64,7 +64,7 @@ export function Hero() {
             className="absolute inset-x-8 bottom-2 h-8 rounded-full bg-brand-navy/25 blur-2xl"
           />
           <Image
-            src="/assets/dorani.png"
+            src={asset("/assets/dorani.png")}
             alt="Safori의 마스코트 도란이"
             width={810}
             height={1002}

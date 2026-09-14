@@ -1,7 +1,7 @@
 import { PhoneScreenshot } from "@/components/phone-frame";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { features } from "@/lib/content";
+import { asset, features } from "@/lib/content";
 
 const dims = [
   { width: 740, height: 1600 },
@@ -35,7 +35,7 @@ export function Features() {
               >
                 <div className="flex justify-center">
                   <PhoneScreenshot
-                    src={item.image}
+                    src={asset(item.image)}
                     alt={item.alt}
                     width={dims[i].width}
                     height={dims[i].height}

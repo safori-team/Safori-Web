@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site } from "@/lib/content";
+import { asset, site } from "@/lib/content";
 
 export function SiteFooter() {
   return (
@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 sm:px-8 md:flex-row md:items-start md:justify-between">
         <div>
           <Image
-            src="/assets/safori-logo-dark.png"
+            src={asset("/assets/safori-logo-dark.png")}
             alt={site.name}
             width={1512}
             height={408}

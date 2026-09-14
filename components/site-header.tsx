@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { nav, site } from "@/lib/content";
+import { asset, nav, site } from "@/lib/content";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-8">
         <a href="#top" className="flex items-center gap-2" aria-label={site.name}>
           <Image
-            src={scrolled || open ? "/assets/safori-logo-dark.png" : "/assets/safori-logo.png"}
+            src={asset(scrolled || open ? "/assets/safori-logo-dark.png" : "/assets/safori-logo.png")}
             alt={site.name}
             width={1512}
             height={408}

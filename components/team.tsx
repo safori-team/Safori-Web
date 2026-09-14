@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { team } from "@/lib/content";
+import { asset, team } from "@/lib/content";
 
 export function Team() {
   return (
@@ -18,7 +18,7 @@ export function Team() {
         <Reveal delay={100}>
           <div className="mx-auto mt-12 flex max-w-3xl flex-col items-center gap-8 rounded-3xl border border-slate-200 bg-white px-7 py-12 text-center sm:px-12">
             <Image
-              src="/assets/dorani.png"
+              src={asset("/assets/dorani.png")}
               alt="Safori의 마스코트 도란이"
               width={810}
               height={1002}

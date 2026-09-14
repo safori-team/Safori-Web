@@ -4,6 +4,16 @@
  * 지표·재무·시장 수치는 대외 공개 범위에서 제외했습니다.
  */
 
+/** GitHub Pages 같은 하위 경로 배포에서 정적 파일 경로 앞에 붙습니다. */
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+/**
+ * public/ 아래 정적 파일 경로에 basePath를 붙입니다.
+ * next/image는 unoptimized 모드에서 basePath를 자동으로 붙이지 않으므로
+ * 이미지·영상 경로는 반드시 이 함수를 거쳐야 합니다.
+ */
+export const asset = (path: string) => `${basePath}${path}`;
+
 export const site = {
   name: "Safori",
   eyebrow: "2026 글로벌 피우다프로젝트 · 팀 Caring",

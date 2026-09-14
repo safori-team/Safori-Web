@@ -1,7 +1,7 @@
 import { PhoneFrame } from "@/components/phone-frame";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { demo } from "@/lib/content";
+import { asset, demo } from "@/lib/content";
 
 export function Demo() {
   return (
@@ -24,9 +24,9 @@ export function Demo() {
                 controls
                 playsInline
                 preload="metadata"
-                poster={demo.poster}
+                poster={asset(demo.poster)}
               >
-                <source src={demo.src} type="video/mp4" />
+                <source src={asset(demo.src)} type="video/mp4" />
                 이 브라우저에서는 영상을 재생할 수 없습니다.
               </video>
             </PhoneFrame>
