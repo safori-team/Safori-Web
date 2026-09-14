@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2575df;
+  --color-brand-deep: #0962d7;
+  --color-brand-navy: #053676;
+  --color-brand-soft: #eaf1fd;
+  --color-accent: #ef8a58;
+  --color-ink: #101828;
+  --color-ink-muted: #5a6478;
+  --color-canvas: #f8f9fc;
+
+  --font-sans: var(--font-noto-sans-kr), "Apple SD Gothic Neo", "Malgun Gothic",
+    system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  /* 한국어 줄바꿈이 단어 중간에서 끊기지 않도록 */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
