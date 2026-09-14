@@ -70,8 +70,12 @@ npx vercel --prod
 ### GitHub Pages
 
 `.github/workflows/deploy-pages.yml`이 이 브랜치에 푸시될 때마다 정적 빌드 후
-Pages로 배포합니다. 저장소 Settings → Pages → Source를 **GitHub Actions**로 두면 되며,
-워크플로가 자동 활성화를 시도하므로 대개 별도 설정 없이 동작합니다.
+Pages로 배포합니다.
+
+**최초 1회 수동 설정이 필요합니다.** 저장소 Settings → Pages → Source를
+**GitHub Actions**로 지정하세요. 워크플로 토큰에는 Pages 사이트를 생성할 권한이
+없어(`Resource not accessible by integration`) 자동 활성화가 되지 않습니다.
+설정 후 Actions 탭에서 워크플로를 재실행하면 배포됩니다.
 
 주소: `https://safori-team.github.io/Safori-Web/`
 
